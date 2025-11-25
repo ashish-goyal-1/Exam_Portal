@@ -1,0 +1,764 @@
+{
+	"info": {
+		"_postman_id": "51048fe4-47f7-42cd-88e0-16c50fc53ccd",
+		"name": "exam.v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24989130"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getUserDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/user/detail",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"user",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/user/students",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"user",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":\"25f41dbe-78b9-06c3-1503-59db390fb657\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/user/student/detail",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"user",
+								"student",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createNewUser - student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/user",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "exam",
+			"item": [
+				{
+					"name": "createExam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"C++ Exam\",\r\n  \"description\": \"Advanced Java concepts\",\r\n  \"instructions\": [\"Read carefully\", \"No cheating\"],\r\n  \"durationMinutes\": 62,\r\n  \"totalMarks\": 4,\r\n  \"noQuestionPerLevel\": [1, 1, 1, 1],\r\n  \"startTime\": \"2026-09-01T11:00:00\",\r\n  \"endTime\": \"2026-09-01T11:00:00\",\r\n  \"easyLevelMark\": 1,\r\n  \"mediumLevelMark\": 1,\r\n  \"hardLevelMark\": 1,\r\n  \"subLevelMark\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/exam",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getExamDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"examId\": \"6a1160b2-162c-03b3-3037-05f923aa5915\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/exam",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateExam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"examId\": \"6a1160b2-162c-03b3-3037-05f923aa5915\",\r\n    \"data\": {\r\n        \"title\": \"Python Exam\",\r\n        \"description\": \"Advanced Java concepts\",\r\n        \"instructions\": [\r\n            \"Read carefully\",\r\n            \"No cheating\"\r\n        ],\r\n        \"durationMinutes\": 62,\r\n        \"totalMarks\": 10,\r\n        \"noQuestionPerLevel\": [\r\n            1,\r\n            1,\r\n            1,\r\n            2\r\n        ],\r\n        \"startTime\": \"2025-09-01T11:00:00\",\r\n        \"endTime\": \"2025-09-01T11:00:00\",\r\n        \"easyLevelMark\": 1,\r\n        \"mediumLevelMark\": 2,\r\n        \"hardLevelMark\": 3,\r\n        \"subLevelMark\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/exam",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExam",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/exam",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllExam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/exam/all",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isExamReady",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"examId\":\"6a1160b2-162c-03b3-3037-05f923aa5915\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/exam/ready",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam",
+								"ready"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "copyCompleteExamWithQuestions - not in current cycle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/exam/copy",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"exam",
+								"copy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "createQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"examId\": \"6a1160b2-162c-03b3-3037-05f923aa5915\",\r\n    \"questionType\": \"Subjective\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/question",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQuestionDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/question?id=c7d57ec6-b1ef-0132-0e12-6df4fbe50f73",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"question"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c7d57ec6-b1ef-0132-0e12-6df4fbe50f73"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateQuestion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"questionId\": \"c7d57ec6-b1ef-0132-0e12-6df4fbe50f73\",\r\n  \"examId\": \"6a1160b2-162c-03b3-3037-05f923aa5915\",      \r\n  \"questionType\": \"MCQ\",  \r\n  \"questionText\": \"What is the capital of India?\",\r\n  \"difficulty\": \"Easy\",  \r\n  \"options\": [\"Paris\", \"London\", \"Berlin\",\"Delhi\"],\r\n  \"correctAnswer\": \"D\",  \r\n  \"suggestedAnswer\": [\"Paris\", \"London\"]  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/question",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuestion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/question",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllQuestion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/question/all",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"question",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadImage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/harsh/OneDrive/Pictures/Screenshots/Screenshot 2025-05-18 194818.png"
+								},
+								{
+									"key": "metadata",
+									"value": "{\"questionId\": \"8a8a62f6-4524-04b2-1051-caa1dd7905ca\", \"locationType\": \"OptionA\"}",
+									"description": "{\"folderPath\": \"users/123\", \"description\": \"Profile picture\", \"createdBy\": \"Harsh\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/image",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteImage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questionId\": \"8a8a62f6-4524-04b2-1051-caa1dd7905ca\",\r\n    \"locationType\": \"OptionC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/image",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{HOST_URL}}/image/eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJsb2NhdGlvblR5cGVcIjpcIlF1ZXN0aW9uXCIsXCJxdWVzdGlvbklkXCI6XCI3MjU5Y2Y1My04MDk1LTA0NGEtMWU3NS0yMmM2MDMzNDVjZTBcIixcImV4YW1JZFwiOlwiYTkzZjMwODAtNjI3Ny0wOGFhLTExZGYtMjI4NGQyM2M3OGEzXCIsXCJsb2NhdGlvblwiOlwiUXVlc3Rpb24vaW1nLnBuZ1wifSIsImV4cCI6MTc1NjY0NjQwNn0.xvoWmaSzb_E5gjATFsCpNaiDyjHBcB551hszdmrp1ok",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"image",
+								"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJsb2NhdGlvblR5cGVcIjpcIlF1ZXN0aW9uXCIsXCJxdWVzdGlvbklkXCI6XCI3MjU5Y2Y1My04MDk1LTA0NGEtMWU3NS0yMmM2MDMzNDVjZTBcIixcImV4YW1JZFwiOlwiYTkzZjMwODAtNjI3Ny0wOGFhLTExZGYtMjI4NGQyM2M3OGEzXCIsXCJsb2NhdGlvblwiOlwiUXVlc3Rpb24vaW1nLnBuZ1wifSIsImV4cCI6MTc1NjY0NjQwNn0.xvoWmaSzb_E5gjATFsCpNaiDyjHBcB551hszdmrp1ok"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assignExam",
+			"item": [
+				{
+					"name": "assignExamToUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"examId\":\"\",\r\n    \"studentId\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/assign/exam",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"assign",
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAssignedExam",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"examId\":\"\",\r\n    \"studentId\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/assign/exam",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"assign",
+								"exam"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userAttempt",
+			"item": [
+				{
+					"name": "Attempt - Start exam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/attempt/",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"attempt",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch question",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/attempt/question?assignmentId=&userquestionId=",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"attempt",
+								"question"
+							],
+							"query": [
+								{
+									"key": "assignmentId",
+									"value": ""
+								},
+								{
+									"key": "userquestionId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"option\":\"\",\r\n    \"text\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/attempt/answer?assignmentId=&userquestionId=",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"attempt",
+								"answer"
+							],
+							"query": [
+								{
+									"key": "assignmentId",
+									"value": ""
+								},
+								{
+									"key": "userquestionId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "generateResult",
+			"item": [
+				{
+					"name": "calculateResult-MCQ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/result/calculate/mcq",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"result",
+								"calculate",
+								"mcq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MarkSubjective",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\":\"\",\r\n    \"questionId\":\"\",\r\n    \"mark\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/result/calculate/subjective",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"result",
+								"calculate",
+								"subjective"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "finalResult",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}/result/generate",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"result",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userResult",
+			"item": [
+				{
+					"name": "getResult",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}/result?assignmentId=",
+							"host": [
+								"{{HOST_URL}}"
+							],
+							"path": [
+								"result"
+							],
+							"query": [
+								{
+									"key": "assignmentId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
