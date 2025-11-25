@@ -73,12 +73,3 @@ You can also import the Postman collection for ready-to-use requests:
 ## 🚀 Getting Started (Coming Soon)
 - to be updated
 
-
-#### For More information, [docs/REAdME.md](docs/README.md).
-
-
-### 👨‍💻 Developed By
-
-[**Harsh Rastogi**](https://harshrastogi15.github.io/Personal/)<br>
-💼 [LinkedIn](https://www.linkedin.com/in/harshrastogi15/)<br>
-🐙 [GitHub](https://github.com/harshrastogi15)<br>
