@@ -2,7 +2,7 @@
 An online **exam management system** built with **Spring Boot (backend)** and **React (frontend)**.
 It enables admins to create and assign exams, manage questions, upload images, and evaluate results, while enabling students to securely attempt randomized sets of questions. Built with a focus on scalability, confidentiality, and ease of use.
 
-This is an upgraded version of the [original Exam Portal](https://github.com/harshrastogi15/examportal), redesigned with a modern full-stack architecture using **React**, **Spring Boot**, **PostgreSQL**.
+This is an upgraded version of the [original Exam Portal](https://github.com/ashish-goyal-1/Quiz-Platform), redesigned with a modern full-stack architecture using **React**, **Spring Boot**, **PostgreSQL**.
 
 ## 📚 Features Upcoming
 - **User Management**: Create and manage students/admins with role-based access.
